@@ -16,11 +16,11 @@ namespace Payment
 
                 Dictionary<string, string> paymentRequestData = new Dictionary<string, string>
                 {
-                    {"TransactionID", "12345"},
+                    {"TransactionID", "1440954863817"},
                     {"MerchantID", "3000000113"},
                     {"Amount", "2000"},
                     {"CurrencyISOCode", "840"},
-                    {"MessageID", "1"},
+                    {"MessageID", "6"},
                     {"Quantity", "1"},
                     {"Channel", "0"},
                     {"Language", "en"},
