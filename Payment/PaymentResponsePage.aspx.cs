@@ -1,4 +1,5 @@
-﻿using System;
+﻿// PaymentResponsePage.aspx.cs
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -8,7 +9,7 @@ using System.Web.UI;
 
 namespace Payment
 {
-    public partial class PaymentRequestPage : System.Web.UI.Page
+    public partial class PaymentResponsePage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

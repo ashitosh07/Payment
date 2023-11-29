@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PaymentRequestPage.aspx.cs" Inherits="Payment.PaymentRequestPage" %>
+﻿<!-- PaymentResponsePage.aspx -->
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PaymentResponsePage.aspx.cs" Inherits="Payment.PaymentResponsePage" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <h2>Payment Response</h2>
-            <%-- Display payment response details here --%>
+            <!-- Display payment response details here -->
         </div>
     </form>
 </body>
