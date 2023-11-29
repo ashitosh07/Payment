@@ -51,7 +51,8 @@
 <head runat="server">
     <title></title>
 </head>
-<body onload="javascript:document.redirectForm.submit();">
+<body onload="javascript:document.forms['redirectForm'].submit();">
+
   
     <%
       
@@ -62,7 +63,7 @@
         String merchantID = "3000000113";
         String language = "en";
         String messageID = "1";
-        String secureHash = "e41e37f325630b4987815632db19e269552e4f5b935ba50ca491fd0e03d5a0b3";
+        String secureHash = "039938d1f55bd302b88ce78784e2db35a831d5e8d54e9f3b409d3602e4133780";
         String themeID = "Theme1";
         String responseBackURL = "http://MerchantSite/RedirectPaymentResponsePage";
         String channel = "0";
@@ -70,7 +71,7 @@
         String version = "1.0";
     %>
 
-    <form action="<%=redirectURL%>" method="post" name="redirectForm">
+         <form action="https://sr-test.payone.io/SmartRoutePaymentWeb/SRPayMsgHandler" method="post" name="redirectForm">
         <input name="MerchantID" type="hidden" value="<%=merchantID%>" />
         <input name="Amount" type="hidden" value="<%=amount%>" />
         <input name="CurrencyISOCode" type="hidden" value="<%=currencyCode%>" />
