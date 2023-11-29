@@ -62,7 +62,7 @@
         String merchantID = "3000000113";
         String language = "en";
         String messageID = "1";
-        String secureHash = "3a2fa566707d0519fbda939bbb818fde896cd2db20abf0425353af60fbfaa0bc";
+        String secureHash = "e41e37f325630b4987815632db19e269552e4f5b935ba50ca491fd0e03d5a0b3";
         String themeID = "Theme1";
         String responseBackURL = "http://MerchantSite/RedirectPaymentResponsePage";
         String channel = "0";
