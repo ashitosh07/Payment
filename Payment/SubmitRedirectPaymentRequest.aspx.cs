@@ -16,7 +16,7 @@ namespace Payment
 
             // Build the form dynamically
             var formBuilder = new StringBuilder();
-            formBuilder.Append("<form action=\"http://SmartrouteURL/SmartRoutePaymentWEB/SRPayMsgHandler\" method=\"post\" name=\"redirectForm\">");
+            formBuilder.Append("<form action=\"https://sr-test.payone.io/SmartRoutePaymentWeb/SRPayMsgHandler\" method=\"post\" name=\"redirectForm\">");
 
             foreach (var parameter in paymentRequestParameters)
             {
