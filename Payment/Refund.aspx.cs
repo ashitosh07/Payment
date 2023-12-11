@@ -12,7 +12,7 @@ using System.Web.Util;
 
 namespace Payment
 {
-    public partial class WebFormRefund : Page
+    public partial class Refund : Page
     {
         private const string SR_URL = "https://sr-test.payone.io/SmartRoutePaymentWeb/SRMsgHandler";
         private const string AUTHENTICATION_TOKEN = "MWI5MjE3Y2IyZDBkZjA2MzE3OTY2OWZi";
@@ -27,13 +27,15 @@ namespace Payment
                 // Request Hashing
                 StringBuilder requestOrderedString = new StringBuilder(AUTHENTICATION_TOKEN);
                 requestOrderedString
-                    .Append(transactionId)
-                    .Append("3000000113")
-                    .Append("4")
-                    .Append("2000")
-                    .Append(6383756355332)
-                    .Append("784")
-                    .Append("1.0");
+                                      .Append(AUTHENTICATION_TOKEN)
+                                      .Append(transactionId)
+                                      .Append("3000000113") // MerchantID
+                                      .Append("4")          // MessageID
+                                      .Append("2000")
+                                      .Append(63837475345297) // OriginalTransactionID
+                                      .Append("784")
+                                      .Append("1.0");       // Version
+                                      
 
                 // Generate SecureHash with SHA256 for Request
                 using (SHA256 sha256Request = SHA256.Create())
@@ -53,7 +55,7 @@ namespace Payment
                               .Append("MerchantID").Append("=").Append("3000000113").Append("&")
                               .Append("MessageID").Append("=").Append("4").Append("&")
                               .Append("Amount").Append("=").Append("2000").Append("&")
-                              .Append("OriginalTransactionID").Append("=").Append(6383756355332).Append("&")
+                              .Append("OriginalTransactionID").Append("=").Append(63837475345297).Append("&")
                               .Append("CurrencyISOCode").Append("=").Append("784").Append("&")
                               .Append("Version").Append("=").Append("1.0").Append("&")
                               .Append("SecureHash").Append("=").Append(secureHash).Append("&");
